@@ -1,0 +1,139 @@
+
+{% extends 'layout.html' %}
+{% block body %}
+
+    <div id="particles-js">
+ 
+
+
+    <div class="container text-center">
+        <br><br>
+        <h1>
+                <img src="/static/images/icono.png" width="50" height="60" class="d-inline-block align-top" alt="">
+                <img src="/static/images/unimetlogo.png" width="30" height="60" class="d-inline-block align-top" alt="">
+                FaceMET</h1>
+        <br><br><br>
+        <h3>Selecciona la imagen a añadir:</h3>
+        <br><br>
+        <form method=POST enctype=multipart/form-data action="{{ url_for('get_image') }}">
+            <input type=file name=file class="btn btn-outline-primary">
+        <br><br>
+
+        <div class="row">
+                <div class="col-md-4">
+                </div>
+            
+                <div class="col-md-4">
+                        <div class="form-group">
+                                <input type="text" name="fullname" placeholder="Nombre de la persona" class="form-control">
+                            </div>
+        
+                </div>
+        </div>
+    
+          
+
+            <input type="submit" class="btn btn-outline-success">
+
+        </form>
+
+        <!-- 
+        <h3>Inserte el nombre de la persona:</h3>
+
+        <form action="/upload" method="POST">
+            <div class="form-group">
+                <input type="text" name="fullname" placeholder="Nombre" class="form-control">
+            </div>
+
+        </form>
+            -->
+
+            <form method=POST enctype=multipart/form-data action="{{ url_for('face_svm') }}">
+                <input type=file name=file class="btn btn-outline-primary">
+            <br><br>
+                <input type="submit" class="btn btn-outline-success">
+    
+            </form>
+
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Launch demo modal
+                  </button>
+
+            <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <br><br><br>
+        <a href="{{ url_for('predict_page') }}" class="btn btn-outline-warning">Predecir imagen de una persona</a>
+        <br><br><br>
+        <a href="{{ url_for('face_detect_live') }}" class="btn btn-outline-danger">Predecir con Webcam (q para salir)</a>
+        <br>
+        <a href="{{ url_for('face_svm') }}" class="btn btn-outline-danger">Predecir con SVM (q para salir)</a>
+        <br>
+        <a href="{{ url_for('video_svm') }}" class="btn btn-outline-danger">Video con SVM (q para salir)</a>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            Modal entrenamiento
+          </button>
+          <div class="text-center">
+                <img src="static/images/Rolling-1s-130px.svg" id="loadingimg" style="  margin-top: 12vh;
+                display: none;  alt="" >
+                <p id=loadingimgtext style="  color: #0073ae;font: bold;
+                display: none;font-size:26px;">Cargando...</p>
+            </div>
+        <a href="{{ url_for('entrenarte') }}" class="btn btn-outline-warning" onclick="loading();">Entrenar modelo</a>
+
+
+    </div>
+</div>
+<!-- Modal Entrenamiento-->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+                <div class="text-center">
+                        <img src="static/images/Rolling-1s-130px.svg" id="loadingimg" style="  margin-top: 12vh;
+                        display: none;  alt="" >
+                        <p id=loadingimgtext style="  color: #0073ae;font: bold;
+                        display: none;font-size:26px;">Cargando...</p>
+                    </div>
+            <a href="{{ url_for('entrenarte') }}" class="btn btn-outline-warning" onclick="loading();">Entrenar modelo</a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    function loading(){
+        $("#loadingimg").show();
+        $("#loadingimgtext" ).show();
+    }
+  </script>
+
+{% endblock %}
+

@@ -1,0 +1,75 @@
+ {% extends 'layout.html' %} {% block body %}
+
+<div id="particles-js">
+
+
+
+    <div class="container text-center">
+        <br><br>
+        <h1>
+            <img src="/static/images/icono.png" width="50" height="60" class="d-inline-block align-top" alt="">
+            <img src="/static/images/unimetlogo.png" width="30" height="60" class="d-inline-block align-top" alt=""> FaceMET
+        </h1>
+        <br><br><br>
+        <h3>Selecciona la imagen a añadir:</h3>
+        <br><br>
+        <form method=POST enctype=multipart/form-data action="{{ url_for('get_image') }}">
+            <input type=file name=file class="btn btn-outline-primary">
+            <br><br>
+
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" name="fullname" placeholder="Nombre de la persona" class="form-control">
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <input type="submit" class="btn btn-outline-success">
+
+        </form>
+
+        <form id="upload-form" action="{{ url_for('get_image') }}" method="POST" enctype="multipart/form-data" class="file-upload" onload="readURL();">
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" name="fullname" placeholder="Nombre de la persona" class="form-control">
+                    </div>
+
+                </div>
+            </div>
+            <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Selecciona una imagen</button>
+
+            <div class="image-upload-wrap">
+                <input class="file-upload-input" type='file' onchange="readURL(this);" id="file-picker" name="file" accept="image/*" multiple />
+                <div class="drag-text">
+                    <h3>Arrastra una foto</h3>
+                </div>
+            </div>
+
+            <div class="file-upload-content">
+                <img class="file-upload-image" src="#" alt="your image" id=content/>
+                <div class="image-title-wrap">
+                    <br>
+                    <input type="submit" class="remove-image" value="Subir" id="upload-button" onclick="loading();"></input>
+                </div>
+
+            </div>
+
+        </form>
+
+
+
+    </div>
+</div>
+
+{% endblock %}

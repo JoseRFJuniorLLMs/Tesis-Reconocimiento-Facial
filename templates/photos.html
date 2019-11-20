@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>FaceMET</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/bootstrap.min.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styledjango.css') }}">
+
+    <!-- Bootstrap core JavaScript -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='jquery.min.js') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+
+    <!-- Importaciones del  _layout -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="{{ url_for('static', filename='css/ie10.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+
+    <!-- Custom styles for this template -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='dropzone.css') }}">
+
+</head>
+
+<body>
+
+    <div id="particles-js"></div>
+    <div class="container">
+        <br>
+        <br>
+        <div class="col-lg-12" style="background: rgba(0,0,0,0.6);margin-top:3em;margin-bottom:5em;padding-top:1em;padding-bottom:3em;color:#fff;border-radius:10px;-webkit-box-shadow: 2px 2px 15px 0px rgba(0, 3, 0, 0.7);
+        -moz-box-shadow:    2px 2px 15px 0px rgba(0, 3, 0, 0.7);
+        box-shadow:         2px 2px 15px 0px rgba(0, 3, 0, 0.7);">
+
+            <div class="col-lg-12">
+                <button type="button" style="background:transparent;border:none">
+                    <a href="{{ url_for('index_page') }}">
+                  <h5 class="text-right"><i class="fas fa-home" aria-hidden="true"></i> Inicio </h5>
+                    </a>
+    
+                    </button>
+                <button type="button" style="background:transparent;border:none">
+    
+                    <a href="{{ url_for('tomarfoto') }}">
+                        <h5 class="text-right"><i class="fas fa-camera" aria-hidden="true"></i> Tomar Foto </h5>
+                    </a>
+                </button>
+
+                <h1 class="text-center section-title" style="margin-bottom:3em">Fotos de {{gallery_name}}</h1>
+            </div>
+            <style>
+                h4 {
+                    margin-bottom: 1.5em;
+                }
+                
+                .img2 {
+                    border-radius: 50%;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    -moz-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+                }
+                
+                img:hover {
+                    -webkit-box-shadow: 2px 2px 21px 0px rgba(0, 3, 0, 0.91);
+                    -moz-box-shadow: 2px 2px 21px 0px rgba(0, 3, 0, 0.91);
+                    box-shadow: 2px 2px 21px 0px rgba(0, 3, 0, 0.91);
+                    border: 2px solid #fff;
+                }
+                
+                h3 {
+                    margin-bottom: 1.3em;
+                }
+                
+                a {
+                    color: inherit
+                }
+                
+                a:hover {
+                    color: inherit;
+                    text-decoration: none;
+                }
+                
+                .section-title:after {
+                    content: ' ';
+                    display: block;
+                    margin: 0 auto;
+                    width: 100px;
+                    margin-top: 6px;
+                    border: 2px solid #d0d0d0;
+                    border-radius: 4px;
+                    -webkit-border-radius: 4px;
+                    -moz-border-radius: 4px;
+                    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+                    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+                    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+                    margin-bottom: 1em;
+                }
+            </style>
+
+            <div class="row">
+
+
+                <form action="/galleries/album/{{gallery_name}}/upload" class="dropzone text-primary" method="POST" enctype="multipart/form-data">
+                </form>
+
+                <div class="container text-center">
+                    <a href="{{ url_for('galleries') }}" class="btn btn-danger text-center">Atras</a>
+                    <button class="btn btn-warning text-center" value="Refresh Page" onClick="window.location.reload();">
+                            Subir
+                        </button>
+
+                </div>
+
+
+                <hr> {% if photos is defined %} {% for photo in photos %}
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <!--<?php-->
+                    <!--if($_SESSION['type'] == "admin") {-->
+                    <!--?>-->
+                    <!-- Dropdown action -->
+                    <div class="btn-group">
+                        <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Opciones <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0)" data-galleryname="{{gallery_name}}" data-photoname="{{photo}}" id="deletePhotobtn">Borrar Foto</a></li>
+                        </ul>
+                    </div>
+                    <!-- End Dropdown action -->
+                    <!--<?php } ?>-->
+                    <a class="thumbnail" href="javascript:void(0)" id="popImage" data-imgsrc="/{{gallery_folder}}{{gallery_name}}/{{photo}}">
+                        <img class="img-responsive" src="/{{gallery_folder}}{{gallery_name}}/{{photo}}" alt="">
+                    </a>
+                </div>
+                {% endfor %} {% else %}
+                <div class="col-lg-3">
+                    <p class="alert alert-info">No hay fotos</p>
+                </div>
+                {% endif %}
+
+            </div>
+            <!-- End row -->
+
+
+
+            <div id="imagemodal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <img src="" id="imagepreview" class="img-responsive">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+        <!-- Container -->
+
+
+
+    </div>
+
+
+    <!-- <footer style="background-color: rgb(28, 28, 28);padding:2em 0;margin-top:1em;">
+      <p class="text-center" style="margin-bottom:0;color:#fff">Creado por Alejandro Marcano y Christian Isturiz</p>
+    </footer>-->
+    <!-- Custom scripts for this template -->
+
+    <script src="{{ url_for('static', filename='js/myscript.js') }}"></script>
+    <script src="static/bootstrap/bootstrap.min.js"></script>
+    <script src="static/js/particles.min.js"></script>
+    <script type="text/javascript" src="static/js/particles.min.js"></script>
+    <script type="text/javascript" src="static/script.js"></script>
+    <script src="{{ url_for('static', filename='dropzone.js') }}"></script>
+
+
+</body>
+
+</html>

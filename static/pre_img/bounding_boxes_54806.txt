@@ -1,0 +1,18 @@
+./static/pre_img\Christian Isturiz\WIN_20191030_14_50_19_Pro.png 221 156 513 541
+./static/pre_img\Christian Isturiz\WIN_20191030_14_50_23_Pro.png 328 207 558 506
+./static/pre_img\Christian Isturiz\WIN_20191030_14_50_24_Pro.png 430 227 660 527
+./static/pre_img\Christian Isturiz\WIN_20191030_14_50_25_Pro (2).png 378 221 620 543
+./static/pre_img\Christian Isturiz\WIN_20191030_14_50_25_Pro (3).png 350 213 591 541
+./static/pre_img\Christian Isturiz\WIN_20191030_14_50_25_Pro.png 380 217 617 529
+./static/pre_img\Christian Isturiz\WIN_20191030_14_50_26_Pro.png 364 245 600 560
+./static/pre_img\Christian Isturiz\WIN_20191030_14_50_27_Pro (2).png 355 243 603 578
+./static/pre_img\Christian Isturiz\WIN_20191030_14_50_27_Pro.png 363 238 602 559
+./static/pre_img\Christian Isturiz\WIN_20191030_14_50_28_Pro (2).png 365 214 596 515
+./static/pre_img\Christian Isturiz\WIN_20191030_14_50_28_Pro.png 362 222 594 529
+./static/pre_img\Christian Isturiz\WIN_20191030_14_50_29_Pro (2).png 341 226 583 552
+./static/pre_img\Christian Isturiz\WIN_20191030_14_50_29_Pro.png 363 210 594 509
+./static/pre_img\Christian Isturiz\WIN_20191030_14_50_30_Pro (2).png 395 242 637 570
+./static/pre_img\Christian Isturiz\WIN_20191030_14_50_30_Pro (3).png 341 219 595 551
+./static/pre_img\Christian Isturiz\WIN_20191030_14_50_30_Pro.png 370 244 612 563
+./static/pre_img\Christian Isturiz\WIN_20191030_14_50_31_Pro (2).png 362 224 607 549
+./static/pre_img\Christian Isturiz\WIN_20191030_14_50_31_Pro.png 355 226 589 545

@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+  <div class="text-center">
+        <img src="static/images/loadingimage.svg" id="loadingimg" style="  margin-top: 12vh;
+        display: none; height:380px; width: 380px" class="img-fluid" alt="" >
+        <p id=loadingimgtext style="  color: #0073ae;font: bold;
+        display: none;font-size:26px;">Cargando...</p>
+    </div>
+
+    <div class="container text-center">
+        <br><br><br><br><br><br><br>
+        <h3>Sube la imagen para predecir:</h3>
+        <br><br>
+        <form method=POST enctype=multipart/form-data action="{{ url_for('predict_image') }}">
+            <input type=file name=file class="btn btn-outline-secondary">
+            <input type="submit" class="btn btn-outline-success">
+        </form>
+        <br><br>
+        <a href="{{ url_for('index_page') }}" class="btn btn-outline-danger">Atras</a>
+    </div>
+
+
+    <form id="upload-form" action="{{ url_for('predict_image') }}" method="POST" enctype="multipart/form-data" class="file-upload" onload="readURL();">
+        <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Selecciona una imagen</button>
+
+        <div class="image-upload-wrap">
+            <input class="file-upload-input" type='file' onchange="readURL(this);" id="file-picker" name="file" accept="image/*" multiple />
+                <div class="drag-text">
+                <h3>Arrastra una foto</h3>
+            </div>
+        </div>
+
+        <div class="file-upload-content">
+                <img class="file-upload-image" src="#" alt="your image" id=content/>
+                <div class="image-title-wrap">
+                  <input type="submit" class="remove-image" value="Subir" id="upload-button" onclick="loading();"></input>
+                </div>
+                
+              </div>
+
+    </form>
+
+
+<script type="text/javascript">
+  function loading(){
+      $("#loadingimg").show();
+      $("#loadingimgtext" ).show();
+      $("#upload-form" ).hide();        
+  }
+</script>
+
+
+
+{% endblock %}
+
+

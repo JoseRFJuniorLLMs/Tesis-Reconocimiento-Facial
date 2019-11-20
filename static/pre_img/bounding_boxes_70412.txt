@@ -1,0 +1,15 @@
+./static/pre_img\Anthony Nardelli\WIN_20191111_16_32_14_Pro.png 551 227 738 459
+./static/pre_img\Anthony Nardelli\WIN_20191111_16_32_15_Pro.png 623 301 782 501
+./static/pre_img\Anthony Nardelli\WIN_20191111_16_32_17_Pro.png 734 292 895 504
+./static/pre_img\Anthony Nardelli\WIN_20191111_16_32_18_Pro (2).png 512 186 730 458
+./static/pre_img\Anthony Nardelli\WIN_20191111_16_32_18_Pro.png 572 261 752 485
+./static/pre_img\Anthony Nardelli\WIN_20191111_16_32_19_Pro (2).png 551 99 822 455
+./static/pre_img\Anthony Nardelli\WIN_20191111_16_32_19_Pro.png 521 120 775 441
+./static/pre_img\Anthony Nardelli\WIN_20191111_16_32_20_Pro (2).png 475 117 741 456
+./static/pre_img\Anthony Nardelli\WIN_20191111_16_32_20_Pro.png 538 87 810 462
+./static/pre_img\Anthony Nardelli\WIN_20191111_16_32_22_Pro.png 494 140 738 452
+./static/pre_img\Anthony Nardelli\WIN_20191111_16_32_23_Pro (2).png 537 137 782 457
+./static/pre_img\Anthony Nardelli\WIN_20191111_16_32_23_Pro.png 521 136 768 457
+./static/pre_img\Anthony Nardelli\WIN_20191111_16_32_24_Pro (2).png 558 90 814 431
+./static/pre_img\Anthony Nardelli\WIN_20191111_16_32_24_Pro.png 554 113 807 439
+./static/pre_img\Anthony Nardelli\WIN_20191111_16_32_25_Pro.png 558 88 814 437

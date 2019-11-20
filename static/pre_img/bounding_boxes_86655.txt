@@ -1,0 +1,11 @@
+./static/pre_img\Ricardo Capuz\WIN_20191114_11_28_06_Pro.png 535 253 797 609
+./static/pre_img\Ricardo Capuz\WIN_20191114_11_28_07_Pro (2).png 737 301 992 650
+./static/pre_img\Ricardo Capuz\WIN_20191114_11_28_07_Pro.png 483 290 734 611
+./static/pre_img\Ricardo Capuz\WIN_20191114_11_28_09_Pro.png 638 359 926 749
+./static/pre_img\Ricardo Capuz\WIN_20191114_11_28_10_Pro.png 660 211 890 533
+./static/pre_img\Ricardo Capuz\WIN_20191114_11_28_11_Pro.png 626 305 886 685
+./static/pre_img\Ricardo Capuz\WIN_20191114_11_28_12_Pro (2).png 663 343 932 707
+./static/pre_img\Ricardo Capuz\WIN_20191114_11_28_12_Pro.png 640 258 887 586
+./static/pre_img\Ricardo Capuz\WIN_20191114_11_28_14_Pro (2).png 494 247 750 567
+./static/pre_img\Ricardo Capuz\WIN_20191114_11_28_14_Pro.png 419 176 653 462
+./static/pre_img\Ricardo Capuz\WIN_20191114_11_28_15_Pro.png 654 268 905 596

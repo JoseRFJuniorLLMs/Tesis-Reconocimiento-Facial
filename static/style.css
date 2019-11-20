@@ -1,0 +1,158 @@
+body {
+    background-image: url(images/azul.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+
+.header {
+    padding-top: 15px;
+    height: 10vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+.upload-form {
+    color: #0073ae;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #eeeeee;
+}
+
+.file-upload {
+    box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    width: 100vh;
+    height: 60vh;
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3vh;
+}
+
+.file-upload-btn {
+    width: 100%;
+    color: #fff;
+    background: #0073ae;
+    border: none;
+    border-radius: 4px;
+    border-bottom: 4px solid #005f8f;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 1vh;
+    /*box-shadow: 2px 4px 10px 0px rgba(0,0,0,0.5);*/
+}
+
+.file-upload-btn:hover {
+    background: #00679b;
+    border-bottom: 4px solid #005f8f;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.file-upload-btn:active {
+    border: 0;
+    transition: all .2s ease;
+}
+
+.file-upload-content {
+    display: none;
+    text-align: center;
+}
+
+.file-upload-input {
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    height: 200px;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+    color: #ffffff;
+    margin-top: 4vh;
+    margin-bottom: 2vh;
+    height: 50vh;
+}
+
+.image-upload-wrap {
+    margin-top: 4vh;
+    border: 3.5px dashed #0073ae;
+    color: #0073ae;
+    position: relative;
+    height: 43vh;
+    margin-bottom: 2vh;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+    background-image: radial-gradient(circle at center, #0088cc, #005f8f);
+    border: 4px dashed #ffffff;
+    color: #ffffff;
+}
+
+.image-title-wrap {
+    padding: 0 15px 15px 15px;
+    color: #222;
+}
+
+.drag-text {
+    text-align: center;
+}
+
+.drag-text h3 {
+    font-weight: 200;
+    text-transform: uppercase;
+    padding: 15vh;
+}
+
+.drag-text h3:hover {
+    color: #ffffff;
+}
+
+.file-upload-image {
+    max-height: 300px;
+    max-width: 350px;
+    margin-top: 2vh;
+    padding: 2vh;
+    color: #ffffff;
+}
+
+.remove-image {
+    width: 200px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    color: #fff;
+    background: #1FB264;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid rgb(25, 150, 87);
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    /*box-shadow: 2px 4px 10px 0px rgba(0,0,0,0.5);*/
+}
+
+.remove-image:hover {
+    background: rgb(25, 150, 87);
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.remove-image:active {
+    border: 0;
+    transition: all .2s ease;
+}
+
+.fileuploaded {
+    position: absolute;
+    max-height: 250px;
+    max-width: 300px;
+}

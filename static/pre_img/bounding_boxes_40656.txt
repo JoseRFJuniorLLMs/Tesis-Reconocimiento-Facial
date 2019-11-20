@@ -1,0 +1,11 @@
+./static/pre_img\Will Smith\10.png 72 50 221 245
+./static/pre_img\Will Smith\11.png 288 90 643 553
+./static/pre_img\Will Smith\12.png 192 31 278 146
+./static/pre_img\Will Smith\2.png 122 113 432 541
+./static/pre_img\Will Smith\3.png 384 84 557 329
+./static/pre_img\Will Smith\5.png 74 115 525 717
+./static/pre_img\Will Smith\6.png 186 105 426 419
+./static/pre_img\Will Smith\7.png 227 137 685 734
+./static/pre_img\Will Smith\8.png 195 126 494 539
+./static/pre_img\Will Smith\9.png 10 33 164 256
+./static/pre_img\Will Smith\maxresdefault.png 258 40 457 321

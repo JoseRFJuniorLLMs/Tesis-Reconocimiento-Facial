@@ -1,0 +1,8 @@
+./static/pre_img\Zack\zack3.png 38 57 202 263
+./static/pre_img\Zack\zack4.png 65 34 139 132
+./static/pre_img\Zack\zack5.png 73 59 202 229
+./static/pre_img\Zack\zack6.png 42 126 200 326
+./static/pre_img\Zack\zack7.png 77 74 251 292
+./static/pre_img\Zack\zack8.png 56 87 219 284
+./static/pre_img\Zack\zackkk.png 100 100 250 285
+./static/pre_img\Zack\zackkk2.png 74 49 212 232

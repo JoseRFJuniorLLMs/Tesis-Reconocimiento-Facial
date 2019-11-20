@@ -1,0 +1,11 @@
+Faces/
+trained_models/
+resultados/
+npy/det1.npy/
+npy/det2.npy/
+npy/det3.npy/
+modelo_transferlearning/20170511-185253.pb/
+model/20170512-110547/
+*.jpg
+*.png
+*.npy

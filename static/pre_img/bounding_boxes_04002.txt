@@ -1,0 +1,13 @@
+./static/pre_img\Konrad Annerud\1456433083113.png 285 41 347 128
+./static/pre_img\Konrad Annerud\Capture.png 131 49 189 122
+./static/pre_img\Konrad Annerud\dfdf.png 110 130 252 311
+./static/pre_img\Konrad Annerud\fashion-2016-02-Konrad-Annerud-leonardo-dicaprio-lookalike-model-ralph-lauren-barneys-main.png 698 149 911 433
+./static/pre_img\Konrad Annerud\gfg.png 90 113 223 283
+./static/pre_img\Konrad Annerud\konrad-annerud-15.png 259 82 371 228
+./static/pre_img\Konrad Annerud\Konrad-Annerud-el-doble-sueco-de-Leonardo-DiCaprio.png 151 59 234 170
+./static/pre_img\Konrad Annerud\konrad-annerud_640x480_71446534513.png 283 56 360 162
+./static/pre_img\Konrad Annerud\Leonardo-DiCaprio-Look-Alike-Konrad-Annerud.png 199 142 301 271
+./static/pre_img\Konrad Annerud\screen-shot-2015-10-30-at-10-16-05-am.png 256 143 424 364
+./static/pre_img\Konrad Annerud\screen-shot-2015-10-30-at-10-19-00-am.png 283 184 504 464
+./static/pre_img\Konrad Annerud\sds.png 71 70 178 209
+./static/pre_img\Konrad Annerud\sdsd.png 189 86 270 194

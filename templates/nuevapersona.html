@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Facenet Menu</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/bootstrap.min.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styledjango.css') }}">
+
+    <!-- Bootstrap core JavaScript -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='jquery.min.js') }}">
+
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+    <div id="particles-js"></div>
+    <div class="container">
+        <br>
+        <br>
+        <div class="col-lg-12" style="background: rgba(0,0,0,0.6);margin-top:3em;margin-bottom:5em;padding-top:1em;padding-bottom:3em;color:#fff;border-radius:10px;-webkit-box-shadow: 2px 2px 15px 0px rgba(0, 3, 0, 0.7);
+        -moz-box-shadow:    2px 2px 15px 0px rgba(0, 3, 0, 0.7);
+        box-shadow:         2px 2px 15px 0px rgba(0, 3, 0, 0.7);">
+
+            <div class="col-lg-12">
+                <button type="button" style="background:transparent;border:none" data-toggle="modal" data-target="#myModal">
+              <h5 class="text-right"><i class="fa fa-user-circle" aria-hidden="true"></i> Tutorial </h5>
+                </button>
+                <button type="button" style="background:transparent;border:none" data-toggle="modal" data-target="#myModal">
+                    <h5 class="text-right"><i class="fa-home" aria-hidden="true"></i> Inicio </h5>
+                </button>
+
+
+                <h1 class="text-center section-title" style="margin-bottom:2em">Resultado de la predición:</h1>
+            </div>
+            <style>
+                h4 {
+                    margin-bottom: 1.5em;
+                }
+                
+                .img2 {
+                    border-radius: 50%;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    -moz-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+                }
+                
+                img:hover {
+                    -webkit-box-shadow: 2px 2px 21px 0px rgba(0, 3, 0, 0.91);
+                    -moz-box-shadow: 2px 2px 21px 0px rgba(0, 3, 0, 0.91);
+                    box-shadow: 2px 2px 21px 0px rgba(0, 3, 0, 0.91);
+                    border: 2px solid #fff;
+                }
+                
+                h3 {
+                    margin-bottom: 1.3em;
+                }
+                
+                a {
+                    color: inherit
+                }
+                
+                a:hover {
+                    color: inherit;
+                    text-decoration: none;
+                }
+                
+                .section-title:after {
+                    content: ' ';
+                    display: block;
+                    margin: 0 auto;
+                    width: 100px;
+                    margin-top: 6px;
+                    border: 2px solid #d0d0d0;
+                    border-radius: 4px;
+                    -webkit-border-radius: 4px;
+                    -moz-border-radius: 4px;
+                    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+                    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+                    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+                    margin-bottom: 1em;
+                }
+            </style>
+
+            <div class="text-center">
+                <img src="static/images/loadingimage.svg" id="loadingimg" style="  margin-top: 12vh;
+        display: none; height:380px; width: 380px" class="img-fluid" alt="">
+                <p id=loadingimgtext style="  color: #0073ae;font: bold;
+        display: none;font-size:26px;">Cargando...</p>
+            </div>
+
+            <form action="{{ url_for('get_image') }}" method="POST" enctype="multipart/form-data" class="file-upload upload-form" onload="readURL();">
+                <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Selecciona una imagen</button>
+
+                <div class="image-upload-wrap">
+                    <input class="file-upload-input" type='file' onchange="readURL(this);" id="file-picker" name="file" accept="image/*" multiple />
+                    <div class="drag-text">
+                        <h3>Arrastra una foto</h3>
+                    </div>
+                </div>
+
+                <div class="file-upload-content">
+                    <img class="file-upload-image" src="#" alt="your image" id=content/>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" name="fullname" placeholder="Nombre de la persona" class="form-control">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="image-title-wrap">
+                        <br>
+                        <input type="submit" class="remove-image" value="Subir" id="upload-button" onclick="loading();"></input>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+        <!-- Container -->
+
+
+
+    </div>
+
+
+    <!-- <footer style="background-color: rgb(28, 28, 28);padding:2em 0;margin-top:1em;">
+      <p class="text-center" style="margin-bottom:0;color:#fff">Creado por Alejandro Marcano y Christian Isturiz</p>
+    </footer>-->
+    <!-- Custom scripts for this template -->
+
+
+    <script src="static/bootstrap/bootstrap.min.js"></script>
+    <script src="static/js/particles.min.js"></script>
+    <script type="text/javascript" src="static/js/particles.min.js"></script>
+    <script type="text/javascript" src="static/script.js"></script>
+
+</body>
+
+</html>
