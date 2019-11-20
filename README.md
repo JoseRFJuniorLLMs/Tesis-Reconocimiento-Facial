@@ -1,12 +1,25 @@
-# facenet-realtime-face-recognition
+# Tesis Reconocimiento facial Facenet, SVM y Transfer Learning
 
-A small-scale flask server facial recognition implementation, using a pre-trained facenet model with real-time web camera face recognition functionality, and a pre-trained Multi-Task Cascading Convolutional Neural Network (MTCNN) for face detection and cropping.
+Aplicacion web desarrollada para mostrar los requerimientos de trabajo de grado para Ingeniero de sistemas titulado "Sistema de Reconocimiento Facial usando Redes Neuronales Convolucionales". 
+
+Se puede evidenciar un resumen de los lenguajes de programación, herramientas y librerías de todo el sistema, incluyendo Modelos de Deep Learning, API REST y Web App. Primero existe la capa de los modelos de Deep Learning los cuales son desarrollados en Python utilizando las principales librerías de ciencias de Datos e Inteligencia Artificial: Tensorflow, Keras, Scikit-learn y Numpy. Además, se le añade la librería de visión Computarizada OpenCV. Seguidamente sigue el servidor backend que funciona como API REST desarrollado en el framework de Python Flask. Por último, se encuentra la capa de Frontend e interfaz gráfica, desarrollada utilizando herramientas de diseño web como lo son HTML, CSS y el lenguaje de programación Javascript, y librerías como Bootstrap y JQuery.  Finalmente, el usuario final podrá acceder a la aplicación desde cualquier navegador web. Ver La Siguiente Imagen
 
 ![Repo List](Screens/arquitectura.png)
 
-* The main inspiration is from vinyakkailas's [repository](https://github.com/vinayakkailas/Face_Recognition) which is imported in the 'lib/' folder and uses David Sandberg's [facenet](https://github.com/davidsandberg/facenet) repository.
+## Fases
+Se desarrolló el algoritmo siguiendo las fases descritas por Li y Jain (2011).
 
-* The pre-trained facenet and MTCNN models are provided by David Sandberg's repository, the pre-trained facenet model I used can be downloaded [here](https://drive.google.com/file/d/0B5MzpY9kBtDVZ2RpVDYwWmxoSUk/edit). A full list of available facenet models in that repository can be seen [here](https://github.com/davidsandberg/facenet/wiki/Training-using-the-VGGFace2-dataset#difference-to-previous-models) and [here](https://github.com/davidsandberg/facenet#pre-trained-models). Though please note the different specifications in each pre-trained model.
+
+## Detección de caras: 
+   Para detección de caras actualmente los dos algoritmos más usados son MTCNN ( Multi-task Cascaded Convolutional Networks) y Haar Cascades de la librería OpenCV. El archivo  Haar Cascades se encuentra en este repo llamado haarcascade_frontalface_default.xml. Para descargar los pesos del MTCNN crear una carpeta llamada "npy" y colocar los 3 archivos "det1.npy", "det2.npy", "det3.npy"
+   
+
+
+![Repo List](Screens/fases.png)
+
+**modelos preentrenados **
+Los modelos preentrenados 
+Los modelos de facenet y MTCNN previamente entrenados son proporcionados por el repositorio de David Sandberg, el modelo de facenet previamente entrenado que utilicé se puede descargar aquí (https://drive.google.com/file/d/0B5MzpY9kBtDVZ2RpVDYwWmxoSUk/edit). Se puede ver una lista completa de los modelos de facenet disponibles en ese repositorio [aquí] (https://github.com/davidsandberg/facenet#pre-trained-models). Sin embargo, tenga en cuenta las diferentes especificaciones en cada modelo pre-entrenado.
 
 &nbsp;
 
