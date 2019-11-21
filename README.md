@@ -1,4 +1,4 @@
-# Tesis Reconocimiento facial Facenet, SVM y Transfer Learning
+# Tesis Reconocimiento facial usando Facenet, One Shot Learning, SVM y Transfer Learning
 
 Aplicacion web desarrollada para mostrar los requerimientos de trabajo de grado para Ingeniero de sistemas titulado "Sistema de Reconocimiento Facial usando Redes Neuronales Convolucionales". 
 
