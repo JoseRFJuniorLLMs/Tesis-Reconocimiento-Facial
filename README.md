@@ -21,20 +21,20 @@ FaceNet utlizando la librería Tensorflow También se realizó la técnica de tr
 
 ## Modelo con ANN de clasificador
   
-![Repo List](Screens/fases.png)
+![Repo List](Screens/keras.png)
 
 El primer modelo se basa en añadir una segunda red neuronal de clasificación con una capa de clasificación categórica softmax, luego de la red neuronal convolucional que extrae las características de la cara. Dada una imagen de una persona, dicha capa softmax retorna la probabilidad de cada persona guardada en la base de datos con respecto a la similitud de la imagen. En la anterior figura se puede ver una arquitectura de este modelo y las tecnologías de desarrollo de cada uno. 
 
 ## Modelo utilizando One Shot Learning
   
-![Repo List](Screens/fases.png)
+![Repo List](Screens/one.png)
 
 El segundo modelo consiste en dado el vector de características de 128 dimensiones extraído del modelo de red neuronal convolucional de FaceNet, comparar las distancias euclidianas de este vector con los vectores guardados en la base de datos. Este modelo se conoce con el nombre de one shot learning, debido a que solo requiere una imagen por persona. 
 
 
 ## Modelo  utilizando SVM de clasificador
   
-![Repo List](Screens/fases.png)
+![Repo List](Screens/svm.png)
 
 El tercer modelo que se realizó consiste en colocar un algoritmo de aprendizaje supervisado llamado SVM (Support-Vector Machine) al final del modelo de red neuronal convolucional de FaceNet. Se utilizó la librería de Python llamada
 Scikit-learn para implementar el algoritmo. 
